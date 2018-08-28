@@ -46,7 +46,7 @@ Pontos de Inclusão	N/D
 Pontos de Extensão	N/D
 
 Fluxo Principal
-1.	O cliente entra na parte de consultar região com baixa velocidade de internet.	
+1.	O cliente entra na parte de consultar região (UF ou Município) com baixa velocidade de internet.	
 2.	O cliente faz uma consulta onde possui regiões com baixa velocidade de internet.	
 
 	                     3.	O sistema busca no banco de dados quais são as regiões onde possuem uma baixa velocidade de internet.
