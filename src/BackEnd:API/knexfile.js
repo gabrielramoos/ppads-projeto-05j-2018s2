@@ -5,7 +5,7 @@ module.exports = {
       host: 'anatel.c6cariqmwc7g.sa-east-1.rds.amazonaws.com',
       port: 3306,
       user: 'consulta',
-      password: 'Consultamack1',
+      password: 'consulta321',
       database: 'Anatel'
     },
     migrations: {

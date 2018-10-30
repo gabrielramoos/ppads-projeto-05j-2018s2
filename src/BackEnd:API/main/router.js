@@ -3,6 +3,33 @@ const router = express.Router();
 
 const anatelDao = require('./dao/anatel');
 
+router.get('/has_connection', async function(req, res, next) {
+  try {
+    var data = await anatelDao.getAllFull()
+    res.send(data)
+  } catch(err) {
+    res.send(err)
+  }
+})
+
+router.get('/has_connection/region/:cod', async function(req, res, next) {
+  try {
+    var data = await anatelDao.getByRegionFull(req.params.cod)
+    res.send(data)
+  } catch(err) {
+    res.send(err)
+  }
+})
+
+router.get('/has_connection/state/:cod', async function(req, res, next) {
+  try {
+    var data = (await anatelDao.getByStateFull(req.params.cod))[0]
+    res.send(data)
+  } catch(err) {
+    res.send(err)
+  }
+})
+
 router.get('/low_connection', async function(req, res, next) {
   try {
     var data = await anatelDao.getAll()
