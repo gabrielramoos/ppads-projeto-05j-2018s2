@@ -4,28 +4,27 @@
 
 # Identificador	CSU01
 
-Nome	Consultar regiões com internet
+Nome	Consultar regiões sem internet
 
 Atores	Cliente
 
-Sumário	Consulta para mostrar as regiões que possuem internet no território brasileiro.
+Sumário	Consulta para mostrar as regiões que não possuem internet no território brasileiro.
 
 Complexidade	Médio
 
 Pré-condições	N/D
 
-Pós Condições	É mostrada as regiões que contêm internet no território brasileiro.
+Pós Condições	É mostrada as regiões que não contêm internet no território brasileiro.
 
 Pontos de Inclusão	N/D
 
 Pontos de Extensão	N/D
 
 Fluxo Principal
-1.	O cliente entra na parte de consultar região com internet.	
-2.	O cliente faz uma consulta onde possui regiões com internet.	
-
-	                    3.	O sistema busca no banco de dados quais são as regiões onde possuem internet.
-	                    4.	O sistema devolve para o usuário em forma gráfica as regiões onde há internet.
+1.	O cliente entra na parte de consultar região sem internet.	
+2.	O cliente faz uma consulta onde possui regiões sem internet.	
+3.	O sistema busca no banco de dados quais são as regiões onde não há internet.
+4	O sistema devolve para o usuário em forma gráfica as regiões onde há internet.
 
 # Identificador	CSU02
 
@@ -47,10 +46,9 @@ Pontos de Extensão	N/D
 
 Fluxo Principal
 1.	O cliente entra na parte de consultar região (UF ou Município) com baixa velocidade de internet.	
-2.	O cliente faz uma consulta onde possui regiões com baixa velocidade de internet.	
-
-	                     3.	O sistema busca no banco de dados quais são as regiões onde possuem uma baixa velocidade de internet.
-                       4.	O sistema devolve para o usuário em forma gráfica as regiões que tem baixa velocidade de internet.
+2.	O cliente faz uma consulta onde possui regiões com baixa velocidade de interne
+3.	O sistema busca no banco de dados quais são as regiões onde possuem uma baixa velocidade de internet.
+4.	O sistema devolve para o usuário em forma gráfica as regiões que tem baixa velocidade de internet.
 
 # Identificador	CSU03
 
@@ -73,7 +71,6 @@ Pontos de Extensão	N/D
 Fluxo Principal
 1.	O cliente entra no menu na parte de Maiores Vendas.	
 2.	O cliente seleciona uma região na qual deseja saber qual empresa mais vende.	
-
-	                      3.	O sistema busca no banco de dados quais são as empresas.
-                        4.	O sistema devolve para o usuário em forma gráfica as empresas que mais vendem naquela região.
+3.	O sistema busca no banco de dados quais são as empresas.
+4.	O sistema devolve para o usuário em forma gráfica as empresas que mais vendem naquela região.
 
