@@ -41,7 +41,7 @@ function getAllFull() {
     .count('Acesso2.COD_ACESSO as quantity')
     .select('Regiao.Regiao as label')
     .groupBy('Regiao')
-    .orderBy('Regiao.Regiao')    
+    .orderBy('quantity')   
 }
 
 function getByRegionFull(Cod_Regiao) {
@@ -51,7 +51,7 @@ function getByRegionFull(Cod_Regiao) {
     .count('Acesso2.COD_ACESSO as quantity')
     .select('Estado.UF as label')
     .groupBy('Estado.UF')
-    .andWhere('Estado.Cod_Regiao', Cod_Regiao)
+    .where('Estado.Cod_Regiao', Cod_Regiao)
     .orderBy('quantity', 'DESC')
 }
 
@@ -62,6 +62,44 @@ function getByStateFull(Cod_State) {
   GROUP BY Anatel.Municipio.Municipio
   ORDER BY quantity DESC
   LIMIT 5;`)
+}
+
+function getAllBusiness() {
+  return knex('Acesso2')
+    .join('Municipio', 'Municipio.Cod_Municipio', '=', 'Acesso2.COD_MUNICIPIO')
+    .join('Estado', 'Estado.Cod_Estado', '=', 'Municipio.Cod_Municipio')
+    .join('Regiao', 'Regiao.Cod_Regiao', '=', 'Estado.Cod_Regiao')
+    .join('Empresa', 'Empresa.Cod_Empresa', '=', 'Acesso2.COD_EMPRESA')
+    .count('Acesso2.COD_ACESSO as quantity')
+    .select('Empresa.Autorizada as label')
+    .groupBy('label')
+    .orderBy('quantity', 'DESC')
+    .limit(5)
+}
+
+function getByRegionBusiness(Cod_Regiao) {
+  return knex('Acesso2')
+    .join('Municipio', 'Municipio.Cod_Municipio', '=', 'Acesso2.COD_MUNICIPIO')
+    .join('Estado', 'Estado.Cod_Estado', '=', 'Municipio.Cod_Municipio')
+    .join('Empresa', 'Empresa.Cod_Empresa', '=', 'Acesso2.COD_EMPRESA')
+    .count('Acesso2.COD_ACESSO as quantity')
+    .select('Empresa.Autorizada as label')
+    .groupBy('label')
+    .where('Estado.Cod_Regiao', Cod_Regiao)
+    .orderBy('quantity', 'DESC')
+    .limit(5)
+}
+
+function getByStateBusiness(Cod_State) {
+  return knex('Acesso2')
+    .join('Municipio', 'Municipio.Cod_Municipio', '=', 'Acesso2.COD_MUNICIPIO')
+    .join('Empresa', 'Empresa.Cod_Empresa', '=', 'Acesso2.COD_EMPRESA')
+    .count('Acesso2.COD_ACESSO as quantity')
+    .select('Empresa.Autorizada as label')
+    .groupBy('label')
+    .where('Municipio.Cod_Estado', Cod_State)
+    .orderBy('quantity', 'DESC')
+    .limit(5)
 }
 
 function getRegions() {
@@ -84,6 +122,9 @@ module.exports = {
   getAllFull,
   getByRegionFull,
   getByStateFull,
+  getAllBusiness,
+  getByRegionBusiness,
+  getByStateBusiness,
   getRegions,
   getStates
 };

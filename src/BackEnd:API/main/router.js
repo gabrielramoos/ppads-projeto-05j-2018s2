@@ -57,6 +57,35 @@ router.get('/low_connection/state/:cod', async function(req, res, next) {
   }
 })
 
+router.get('/top_business', async function(req, res, next) {
+  try {
+    var data = await anatelDao.getAllBusiness()
+    res.send(data)
+  } catch(err) {
+    res.send(err)
+  }
+})
+
+router.get('/top_business/region/:cod', async function(req, res, next) {
+  try {
+    var data = await anatelDao.getByRegionBusiness(req.params.cod)
+    res.send(data)
+  } catch(err) {
+    res.send(err)
+  }
+})
+
+router.get('/top_business/state/:cod', async function(req, res, next) {
+  try {
+    var data = (await anatelDao.getByStateBusiness(req.params.cod))
+    console.log(data)
+    res.send(data)
+  } catch(err) {
+    console.log(err)
+    res.send(err)
+  }
+})
+
 router.get('/regions', async function(req, res, next) {
   try {
     var data = await anatelDao.getRegions()
