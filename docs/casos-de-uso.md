@@ -54,26 +54,26 @@ Fluxo Principal
 
 # Identificador	CSU03
 
-Nome	Consultar regiões onde não há internet
+Nome    Consultar o "top 5" das empresas que dominam as regiões.
 
 Atores	Cliente
 
-Sumário	Consulta para mostrar as regiões que não possuem internet no Brasil. 
+Sumário	Consulta para mostrar o "top 5" de empresas que dominam as regiões no quisito de vendas. 
 
 Complexidade	Médio
 
 Pré-condições	N/D
 
-Pós Condições	É mostrada as regiões que não possuem internet no Brasil.
+Pós Condições	É mostrada o "top 5" de empresas que mais vendem na região selecionada .
 
 Pontos de Inclusão	N/D
 
 Pontos de Extensão	N/D
 
 Fluxo Principal
-1.	O cliente entra na parte de consultar região sem internet.	
-2.	O cliente faz uma consulta onde possui regiões sem internet.	
+1.	O cliente entra no menu na parte de Maiores Vendas.	
+2.	O cliente seleciona uma região na qual deseja saber qual empresa mais vende.	
 
-	                      3.	O sistema busca no banco de dados quais são as regiões onde não há internet.
-                        4.	O sistema devolve para o usuário em forma gráfica as regiões que não possuem internet.
+	                      3.	O sistema busca no banco de dados quais são as empresas.
+                        4.	O sistema devolve para o usuário em forma gráfica as empresas que mais vendem naquela região.
 
