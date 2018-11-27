@@ -1,0 +1,14 @@
+.card-icon {
+  background: linear-gradient(60deg, #2b3787, #005caa) !important;
+}
+
+.card-title {
+  font-size: 18px;
+}
+
+.content {
+  margin-top: 0 !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
