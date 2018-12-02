@@ -15,6 +15,7 @@
     "react-app-rewire-preact": "^1.0.1",
     "react-app-rewired": "^1.6.2",
     "react-chartjs-2": "^2.7.2",
+    "react-custom-scrollbars": "^4.2.1",
     "react-dom": "^16.4.1",
     "react-hot-loader": "^4.3.4",
     "react-maskedinput": "^4.0.1",

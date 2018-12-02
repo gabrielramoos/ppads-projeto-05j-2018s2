@@ -1,7 +1,7 @@
 import React from 'react'
 import NavItem from 'components/NavItem'
 
-const Sidebar = ({ menu, title }) => {
+const Sidebar = ({ menu }) => {
   return (
     <div className="sidebar" data-color="black" data-background-color="black">
       <div className="logo">

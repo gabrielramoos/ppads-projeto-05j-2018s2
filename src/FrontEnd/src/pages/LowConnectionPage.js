@@ -112,6 +112,9 @@ class LowConnectionPage extends React.Component {
                       <h2 style={{marginTop: '30px', textAlign: 'center'}}>Carregando novas informações, por favor aguarde....</h2>
                     }
                     <br />
+                         <div style={{ textAlign: 'center' }}>
+                      Quantidade Total de Acessos que possuem internet com baixa velocidade, ou seja, entre as faixas de 0 a 512kbps e 512kbps a 2mbps.
+                    </div>
                   </div>
                 </div>
               </div>

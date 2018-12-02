@@ -12,3 +12,15 @@
   align-items: center;
   justify-content: center;
 }
+
+.navbar-toggler-right {
+  display: none;
+}
+
+@media (max-width: 991px) {
+  .navbar-toggler-right {
+    display: block;
+  }
+}
+
+

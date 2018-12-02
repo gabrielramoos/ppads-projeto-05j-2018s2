@@ -1,16 +1,17 @@
-import React from "react";
-import { Link, withRouter } from "react-router-dom";
+import React from 'react'
+import { Link, withRouter } from 'react-router-dom'
 
-const NavItem = ({ to, children, icon, location }) => {
-  const isActive = location.pathname.startsWith(to);
+const NavItem = ({ to, children, icon }) => {
   return (
-    <li className={isActive ? "nav-item active" : "nav-item"}>
-      <Link className="nav-link" to={to}>
-        <i className={"fa fa-" + icon} />
-        <p>{children}</p>
-      </Link>
-    </li>
-  );
-};
+    <a href={to}>
+      <li className="nav-item">
+        <div className="nav-link">
+          <i className={'fa fa-' + icon} />
+          <p>{children}</p>
+        </div>
+      </li>
+    </a>
+  )
+}
 
-export default withRouter(NavItem);
+export default withRouter(NavItem)

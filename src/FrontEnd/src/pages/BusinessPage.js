@@ -45,7 +45,7 @@ class BusinessPage extends React.Component {
           <div className="container-fluid">
             <div className="row">
               <div className="col-md-12">
-                <h3>Top 5 Empresas Fornecedoras - Caso de Uso Final</h3>
+                <h3>Top 5 Empresas Fornecedoras em 2018 - Caso de Uso Final</h3>
                 <div className="card">
                   <div className="card-header card-header-icon card-header-primary">
                     <div className="card-icon">
@@ -112,9 +112,7 @@ class BusinessPage extends React.Component {
                       <h2 style={{marginTop: '30px', textAlign: 'center'}}>Carregando novas informações, por favor aguarde....</h2>
                     }
                     <br />
-                    <div style={{ textAlign: 'center' }}>
-                      Quantidade Total de Acessos que possuem internet com baixa velocidade, ou seja, entre as faixas de 0 a 512kbps e 512kbps a 2mbps.
-                    </div>
+        
                   </div>
                 </div>
               </div>
